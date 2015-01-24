@@ -1,0 +1,95 @@
+html,
+body {
+    margin:0;
+    height:100%;
+    padding-top: 20px;
+}
+/*
+*main Content
+*/
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+#header {
+    padding:10px;
+}
+#content {
+    padding:10px;
+    padding-bottom:100px; /* Height of the footer element */
+}
+
+/*
+Navigation
+*/
+
+.nav-gravatar{
+    float: left;
+    left: -5px;
+    position: relative;
+    top: -5px;
+}
+.media-left, .media-right, .media-body {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.status-media{
+    border: 1px solid #e3e3e3;
+    background: #ffffff;
+    padding: 1em;
+}
+/*
+* Form
+*/
+.delete-button {
+    margin: 10px;
+}
+
+#form {
+    margin: 4em auto 0px;
+    width: 670px;
+    padding-bottom: 50px;
+}
+
+#form form{
+    padding: 2em;
+    border: 1px solid #dddddd;
+}
+#form h1{
+    text-align: center;
+    font-size: 3em;
+}
+#form .form-control{
+    height: 55px;
+}
+#form .buttons button[type="submit"] {
+    width: 100%;
+    height: 55px;
+}
+
+/*
+ * Footer
+ */
+#footer {
+    width:100%;
+    height:110px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:#f9f9f9;
+    text-align: center;
+
+.glyphicon{
+    color: lightpink;
+}
+
+
+
+.flag{
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    padding-left: 2px;
+}

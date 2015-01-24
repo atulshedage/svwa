@@ -1,0 +1,135 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the Closure to execute when that URI is requested.
+|
+*/
+
+/*
+ * Home page
+ */
+
+Route::get('/', [
+	'as' => 'home',
+	'uses' => 'PagesController@home',
+	]);
+
+/*
+ * Testing Sql Vulnerability
+ */
+
+Route::get('sqltest', [
+	'as' => 'sqltest',
+	'uses' => 'PagesController@index',
+]);
+
+Route::post('sqltest', [
+	'as' => 'sqltest',
+	'uses' => 'PagesController@post',
+]);
+
+/*
+ * Registration Procedure
+ */
+Route::get('register',[
+	'as' => 'register_path',
+	'uses' => 'RegistrationController@register',
+	]);
+
+Route::post('register', [
+    'as' => 'register_path',
+    'uses' => 'RegistrationController@store'
+]);
+
+/*
+ * Sign in A user with creditionals
+ */
+
+Route::get('signin',[
+	'as' => 'signin_path',
+	'uses' => 'SessionController@index'
+]);
+
+Event::forget('session.create: csrf');
+Route::get('logout',[
+	'as' => 'logout_path',
+	'uses' => 'SessionController@destroy'
+]);
+
+Route::post('signin',[
+	'as' => 'signin_path',
+	'uses' => 'SessionController@store'
+]);
+
+/*
+ * Statuses Page
+ */
+
+Route::get('statuse',[
+	'as' => 'status_path',
+	'uses' => 'StatusController@index'
+]);
+
+Route::post('statuse',[
+	'as' => 'status_path',
+	'uses' => 'StatusController@store'
+]);
+
+/*
+ * Users
+ */
+
+Route::get('users',[
+	'as' => 'users_path',
+	'uses' => 'UsersController@index']);
+
+/*
+ * Route to profile path @username
+ */
+
+Route::get('@{username}',[
+	'as' => 'profile_path',
+	'uses' => 'UsersController@show']);
+
+/*
+ * Following other users
+ */
+
+Route::post('follows',[
+	'as' => 'follow_user',
+	'uses' => 'UsersController@follow'
+]);
+
+Route::get('input', function(){
+	return View::make('input.index');
+});
+
+Route::any('form-submit', function(){
+	$input = Input::file('file')->move(__DIR__.'/storage/',Input::file('file')->getClientOriginalName());
+
+	return $input;
+});
+
+Route::get('input', [
+	'as' => 'input_path',
+	'uses' => 'UsersController@input'
+]);
+
+Route::post('input', [
+	'as' => 'input_path',
+	'uses' => 'UsersController@store'
+]);
+
+Route::get('getfile',function(){
+	$path = dirname(dirname(__FILE__)) . '/data/';
+	$contents = File::get($path . 'atul.png');
+
+	return $contents;
+
+});
