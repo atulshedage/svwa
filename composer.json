@@ -5,7 +5,13 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+	  "laracasts/flash": "~1.0",
+	  "laracasts/commander": "~1.0",
+	  "way/generators": "~2.0",
+	  "laracasts/validation": "~1.0",
+	  "fzaninotto/faker": "v1.3.0",
+	  "laracasts/presenter": "0.1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -20,14 +26,6 @@
 		"dvwa\\": "app/dvwa"
 	  }
 	},
-  "require": {
-	"laracasts/flash": "~1.0",
-	"laracasts/commander": "~1.0",
-	"way/generators": "~2.0",
-	"laracasts/validation": "~1.0",
-	"fzaninotto/faker": "v1.3.0",
-	"laracasts/presenter": "0.1.*"
-  },
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
