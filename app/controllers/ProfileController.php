@@ -1,8 +1,8 @@
 <?php
 
-use dvwa\users\UpdateUserCommand;
-use \dvwa\users\profileRepository;
-use dvwa\users\User;
+use svwa\users\UpdateUserCommand;
+use svwa\users\profileRepository;
+use svwa\users\User;
 class ProfileController extends \BaseController {
 
 	public $profileRepository;
@@ -35,6 +35,7 @@ class ProfileController extends \BaseController {
 			'last_name' => $last_name,
 			'userId' => $userId,
 		]);
+
 
 		Flash::success('User Updated Successfully');
 

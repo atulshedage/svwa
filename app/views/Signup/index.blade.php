@@ -4,7 +4,7 @@
 @stop
 @section('content')
     <div id="form">
-            <h1>Register for DVWA</h1>
+            <h1>Register for SVWA</h1>
 
             @include('layouts.partials.errors')
 

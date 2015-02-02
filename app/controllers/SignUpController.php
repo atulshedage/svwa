@@ -1,6 +1,6 @@
 <?php
 
-use dvwa\Signup\SignUpCommand;
+use svwa\Signup\SignUpCommand;
 
 class SignUpController extends \BaseController {
 

@@ -29,7 +29,7 @@
                 </div>
                 <div class="panel-body">
                     <ul class="list-group">
-                        <li class="list-group-item">{{link_to_route('csrf_profile_update_path','CSRF Normal')}}</li>
+                        <li class="list-group-item">{{link_to_route('csrf_path','CSRF Normal')}}</li>
                         <li class="list-group-item"><a href="#">CSRF Bypass</a></li>
                     </ul>
                 </div>
@@ -40,11 +40,11 @@
         <div class="col-md-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Insecure Direct Object References</h3>
+                    <h3 class="panel-title">Privilege Escalation</h3>
                 </div>
                 <div class="panel-body">
                     <ul class="list-group">
-                        <li class="list-group-item">{{link_to_route('idor_path','IDOR')}}</li>
+                        <li class="list-group-item">{{link_to_route('priv_path','Privilege-Escalation')}}</li>
                     </ul>
                 </div>
 

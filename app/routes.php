@@ -110,30 +110,34 @@ Route::post('Browser-Xss',[
  * CSRF Vulnerability
  * Update Profile Page
  */
-
-Route::get('Profile',[
-	'as' => 'csrf_profile_update_path',
-	'uses' => 'ProfileController@index'
+Route::get('csrf-normal',[
+	'as' => 'csrf_path',
+	'uses' => 'XssController@CsrfIndex'
 ]);
 
-Route::post('Profile',[
-	'as' => 'csrf_profile_update_path',
-	'uses' => 'ProfileController@update'
+Route::get('csrf-bypass',[
+	'as' => 'csrf_path',
+	'uses' => 'XssController@CsrfbypassIndex'
+]);
+
+Route::post('csrf-normal',[
+	'as' => 'csrf_path',
+	'uses' => 'XssController@StoredXss'
 ]);
 
 
 /*
- * IDOR Vunerability
+ * Privilege Escalation Vunerability
  */
 
-Route::get('IDOR',[
-	'as' => 'idor_path',
-	'uses' => 'IdorController@index'
+Route::get('privilege-escalation',[
+	'as' => 'priv_path',
+	'uses' => 'PrivController@index'
 ]);
 
-Route::post('IDOR',[
-	'as' => 'idor_path',
-	'uses' => 'IdorController@store'
+Route::post('privilege-escalation',[
+	'as' => 'priv_path',
+	'uses' => 'PrivController@store'
 ]);
 
 /*

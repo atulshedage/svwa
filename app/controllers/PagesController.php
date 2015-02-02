@@ -15,7 +15,7 @@ class PagesController extends \BaseController {
 
 	public function vulnerabilitites()
 	{
-		return 'vulnerabilitites pages';
+		return View::make('pages.vulnerablities');
 	}
 
 	public function about()

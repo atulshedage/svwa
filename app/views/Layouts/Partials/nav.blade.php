@@ -7,11 +7,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            {{HTML::linkroute('home','DVWA',array(),array('class' => 'navbar-brand'))}}
+            {{HTML::linkroute('home','SVWA',array(),array('class' => 'navbar-brand'))}}
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
                 <li>{{link_to_route('instruction_path','Instruction')}}</li>
                 <li>{{link_to_route('vulnerability_path','Vulnerabilities')}}</li>
                 <li>{{link_to_route('about_path','about')}}</li>
@@ -22,7 +21,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         {{$currentUser->username}}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li>{{link_to_route('csrf_profile_update_path','Profile')}}</li>
                         <li>{{link_to_route('logout_path','Logout')}}</li>
                     </ul>
                 </li>

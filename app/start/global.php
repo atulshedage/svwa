@@ -57,7 +57,10 @@ App::error(function(Laracasts\Validation\FormValidationException $exception, $co
 {
 	return Redirect::back()->withInput()->withErrors($exception->getErrors());
 });
-
+App::error(function(Symfony\Component\HttpKernel\Exception\NotFoundHttpException $exception,$code)
+{
+	return Response::make("Something Wrong!!", 404);
+});
 
 /*
 |--------------------------------------------------------------------------

@@ -1,8 +1,8 @@
 <?php
 
-use dvwa\BlogPosts\PublishBlogPostCommand;
-use dvwa\BlogPosts\postsRepository;
-use dvwa\BlogPosts\BlogPost;
+use svwa\BlogPosts\PublishBlogPostCommand;
+use svwa\BlogPosts\postsRepository;
+use svwa\BlogPosts\BlogPost;
 
 class XssController extends \BaseController {
 
@@ -103,4 +103,20 @@ class XssController extends \BaseController {
 
 	}
 
+
+	/**
+	 * CSRF Index
+	 * @return mixed
+     */
+	public function CsrfIndex()
+	{
+		$posts = $this->postsRepository->getAllUsersPosts();
+		return View::make('vulnerabilities.csrf',compact('posts'));
+	}
+
+	public function CsrfbypassIndex()
+	{
+		$posts = $this->postsRepository->getAllUsersPosts();
+		return View::make('vulnerabilities.csrf-bypass',compact('posts'));
+	}
 }

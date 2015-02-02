@@ -2,7 +2,7 @@
 <html lang="en" ng-app="larabook">
 <head>
     <meta charset="UTF-8">
-    <title>Damn Vulnerable Web Application :@yield('title')</title>
+    <title>Suruji Vulnerable Web Application :@yield('title')</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
