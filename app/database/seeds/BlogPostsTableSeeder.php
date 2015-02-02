@@ -2,14 +2,15 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
-use dvwa\BlogPosts\BlogPost;
+use svwa\BlogPosts\BlogPost;
 
 class BlogPostsTableSeeder extends Seeder {
 
 	public function run()
 	{
 		$faker = Faker::create();
-		$user = \dvwa\users\User::lists('id');
+
+		$user = \svwa\users\User::lists('id');
 
 		foreach(range(1, 10) as $index)
 		{
