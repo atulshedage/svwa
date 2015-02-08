@@ -97,7 +97,9 @@ class XssController extends \BaseController {
 		}
 		else
 		{
-			return Redirect::home();
+			Flash::error('wooooo what the heck Dude!!');
+			return Redirect::back();
+
 		}
 
 
