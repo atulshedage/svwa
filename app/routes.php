@@ -116,7 +116,7 @@ Route::get('csrf-normal',[
 ]);
 
 Route::get('csrf-bypass',[
-	'as' => 'csrf_path',
+	'as' => 'csrf_bypass_path',
 	'uses' => 'XssController@CsrfbypassIndex'
 ]);
 

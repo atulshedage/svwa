@@ -30,7 +30,7 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <li class="list-group-item">{{link_to_route('csrf_path','CSRF Normal')}}</li>
-                        <li class="list-group-item"><a href="#">CSRF Bypass</a></li>
+                        <li class="list-group-item">{{link_to_route('csrf_bypass_path','CSRF Bypass')}}</li>
                     </ul>
                 </div>
 
