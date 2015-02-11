@@ -22,5 +22,5 @@
     @foreach($searchs as $search)
         <p class="lead"> You are searching for <b>{{$search}}</b> </p>
     @endforeach
-    </div> <!-- / .row -->
+
 @stop

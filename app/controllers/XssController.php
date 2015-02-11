@@ -31,6 +31,14 @@ class XssController extends \BaseController {
 		return View::make('Vulnerabilities.reflected-xss',compact('searchs'));
 	}
 
+	/*
+	 * Source Code Analyze Xss
+	 */
+	public function SourceCodeXss()
+	{
+		$searchs = Input::only('search');
+		return View::make('Vulnerabilities.source_code_xss',compact('searchs'));
+	}
 	/**
 	 * Display a listing of the resource.
 	 * GET /Stored-Xss
@@ -85,6 +93,7 @@ class XssController extends \BaseController {
 		return Redirect::route('browser_xss_path')->withInput($color);
 
 	}
+
 
 	public function delete($id)
 	{

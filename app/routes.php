@@ -76,6 +76,10 @@ Route::get('Reflected-Xss',[
 	'uses' => 'XssController@ReflectedXss'
 ]);
 
+Route::get('Source-Code-Xss',[
+	'as' => 'source_code_xss_path',
+	'uses' => 'XssController@SourceCodeXss'
+]);
 /*
  * Stored Xss Via Blog Post
  */

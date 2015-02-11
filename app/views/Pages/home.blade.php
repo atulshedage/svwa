@@ -14,6 +14,7 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <li class="list-group-item">{{link_to_route('reflected_xss_path','Reflected Xss')}}</li>
+                        <li class="list-group-item">{{link_to_route('source_code_xss_path','Source Code Xss')}}</li>
                         <li class="list-group-item">{{link_to_route('stored_xss_path','Stored Xss')}}</li>
                         <li class="list-group-item">{{link_to_route('browser_xss_path','Browser Based Xss')}}</li>
                     </ul>
