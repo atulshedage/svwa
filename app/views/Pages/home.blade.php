@@ -63,7 +63,6 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <li class="list-group-item">{{link_to_route('normal_injection_path','Union Based SQL Injection')}}</li>
-                        <li class="list-group-item"><a href="#">Blind Based Injection</a></li>
                         <li class="list-group-item">{{link_to_route('login_bypass_path','Login Bypass')}}</li>
                     </ul>
                 </div>
