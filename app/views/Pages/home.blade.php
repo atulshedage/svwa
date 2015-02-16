@@ -73,11 +73,12 @@
         <div class="col-md-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Broken Authentication</h3>
+                    <h3 class="panel-title">Sensitive Data Exposure</h3>
                 </div>
                 <div class="panel-body">
                     <ul class="list-group">
-                        <li class="list-group-item">{{link_to_route('bruteforce_login_path','Bruteforce')}}</li>
+                        <li class="list-group-item">{{link_to_route('clickjacking_path','ClickJacking')}}</li>
+                        <li class="list-group-item">{{link_to_route('phpconfig_path','PHP Server Config Page')}}</li>
                     </ul>
                 </div>
 

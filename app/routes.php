@@ -154,16 +154,16 @@ Route::get('Normal-Sql',[
 ]);
 
 /*
- * Bruteforce Vulnerability
+ * Sensitive Data Exposure Vulnerability
  */
-Route::get('Bruteforce',[
-	'as' => 'bruteforce_login_path',
-	'uses' => 'BruteforceController@index'
+Route::get('clickjacking',[
+	'as' => 'clickjacking_path',
+	'uses' => 'SensitiveDataController@clickjack'
 ]);
 
-Route::post('Bruteforce',[
-	'as' => 'bruteforce_login_path',
-	'uses' => 'BruteforceController@store'
+Route::get('Php-Config',[
+	'as' => 'phpconfig_path',
+	'uses' => 'SensitiveDataController@config'
 ]);
 /*
  * Redirection
