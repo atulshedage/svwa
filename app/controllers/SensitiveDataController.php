@@ -4,7 +4,7 @@ class SensitiveDataController extends \BaseController {
 
 	public function __construct()
 	{
-		$this->beforeFilter('guest_bruteforce', ['except' => 'destroy']);
+		$this->beforeFilter('guest_check');
 	}
 
 

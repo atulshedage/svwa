@@ -161,10 +161,6 @@ Route::get('clickjacking',[
 	'uses' => 'SensitiveDataController@clickjack'
 ]);
 
-Route::get('Php-Config',[
-	'as' => 'phpconfig_path',
-	'uses' => 'SensitiveDataController@config'
-]);
 /*
  * Redirection
  */
