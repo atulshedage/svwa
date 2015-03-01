@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en" ng-app="larabook">
+<html lang="en" ng-app="SVWA">
 <head>
     <meta charset="UTF-8">
     <title>Suruji Vulnerable Web Application :@yield('title')</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css')}}">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
     <!--[if lt IE 9]>
-    <script src="/js/html5shiv.js" type="text/javascript"></script>
-    <script src="/js/respond.min.js" type="text/javascript"></script>
+    <script src="{{ URL::asset('js/html5shiv.js') }}" type="text/javascript"></script>
+    <script src="{{ URL::asset('js/respond.min.js') }}" type="text/javascript"></script>
     <![endif]-->
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 
 
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="{{ URL::asset('js/jquery.js') }}"></script>
+<script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 </body>
 </html>
