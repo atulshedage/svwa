@@ -30,4 +30,5 @@ This Application provides you to test variety of OWASP Vulnerability from your l
 
 ### Contributors
 * [Atul Shedage](https://github.com/atulshedage)
+* [Prathamesh More](https://www.facebook.com/prathamesh.more3?fref=nf)
 * [Sahil Saif] (https://www.facebook.com/bewithsahilsaif?fref=ts)
